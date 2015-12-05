@@ -1,6 +1,7 @@
 package models;
 
 import java.util.*;
+import play.data.validation.Constraints;
 
 public class Product {
 
@@ -9,23 +10,20 @@ public class Product {
 	static {
 		products = new ArrayList<Product>();
 
-		products.add(new Product("1111111111111", "PaperClips 1",
-				"PaperClips Description 1"));
-		products.add(new Product("2222222222222", "PaperClips 2",
-				"PaperClips Description 2"));
-		products.add(new Product("3333333333333", "PaperClips 3",
-				"PaperClips Description 3"));
-		products.add(new Product("4444444444444", "PaperClips 4",
-				"PaperClips Description 4"));
-		products.add(new Product("5555555555555", "PaperClips 5",
-				"PaperClips Description 5"));
-	}
-	
-	public Product(){
-		
+		products.add(new Product("1111111111111", "PaperClips 1", "PaperClips Description 1"));
+		products.add(new Product("2222222222222", "PaperClips 2", "PaperClips Description 2"));
+		products.add(new Product("3333333333333", "PaperClips 3", "PaperClips Description 3"));
+		products.add(new Product("4444444444444", "PaperClips 4", "PaperClips Description 4"));
+		products.add(new Product("5555555555555", "PaperClips 5", "PaperClips Description 5"));
 	}
 
+	public Product() {
+
+	}
+
+	@Constraints.Required
 	public String ean;
+	@Constraints.Required
 	public String name;
 	public String description;
 
