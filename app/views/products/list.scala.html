@@ -27,11 +27,14 @@
 			<td><a href="@routes.Products.details(product.ean)">@product.ean</a></td>
 			<td><a href="@routes.Products.details(product.name)">@product.name</a></td>
 			<td><a href="@routes.Products.details(product.description)">@product.description</a></td>
-			<td><a href="@routes.Products.details(product.ean)"><i class="glyphicon glyphicon-pencil"></i></a></td>
-			<td><a onclick=del("@routes.Products.delete(product.ean)") style="cursor: pointer; cursor: hand;"><i class="glyphicon glyphicon-trash"></i></a></td>
+			<td><a href="@routes.Products.details(product.ean)"><i
+					class="glyphicon glyphicon-pencil"></i></a></td>
+			<td><a onclick=del("@routes.Products.delete(product.ean)") style="cursor: pointer; cursor: hand;"><i
+					class="glyphicon glyphicon-trash"></i></a></td>
 		</tr>
 		}
 	</tbody>
 </table>
-<a href="@routes.Products.newProduct()" class="btn btn-default" role="button"><i class="glyphicon glyphicon-plus"></i>New Product</a>
+<a href="@routes.Products.newProduct()" class="btn btn-default"
+	role="button"><i class="glyphicon glyphicon-plus"></i>&nbsp;New Product</a>
 }
